@@ -1291,19 +1291,25 @@
             apiHost: "https://cloud.flowiseai.com",
             theme: {
                 button: {
-                    backgroundColor: "#5B8FB9", // Pacific Blue
+                    backgroundColor: "#5B8FB9",
                     iconColor: "white",
-                    customIconSrc: "https://cdn-icons-png.flaticon.com/512/2040/2040946.png", // Chef Hat Icon
+                    customIconSrc: "https://cdn-icons-png.flaticon.com/512/2040/2040946.png",
                 },
                 chatWindow: {
+                    // ADDED THESE LINES HERE:
+                    showTitle: true,
+                    title: "Rice Station Chef",
+                    titleBackgroundColor: "#5B8FB9",
+                    titleTextColor: "#ffffff",
+                    
                     welcomeMessage: "Hello! I am your Rice Station Chef. Ask me about recipes, leftovers, or cooking tips!",
                     backgroundColor: "#ffffff",
                     botMessage: {
-                        backgroundColor: "#FDFBF7", // Cream
-                        textColor: "#304D6D", // Navy
+                        backgroundColor: "#FDFBF7",
+                        textColor: "#304D6D",
                     },
                     userMessage: {
-                        backgroundColor: "#5B8FB9", // Pacific Blue
+                        backgroundColor: "#5B8FB9",
                         textColor: "#ffffff",
                     },
                     textInput: {
