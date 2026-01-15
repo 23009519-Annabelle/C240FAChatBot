@@ -800,12 +800,13 @@
                 </li>`
             ).join('');
             
-            document.getElementById('modalSteps').innerHTML = data.steps.map((s, index) => 
-                `<div class="flex gap-4">
+            document.getElementById('modalSteps').innerHTML = data.steps.map((s, index) => {
+                const scaledStep = replaceScalePlaceholders(s, currentPortionScale);
+                return `<div class="flex gap-4">
                     <span class="font-serif font-bold text-2xl text-gray-200">${index + 1}</span>
-                    <p class="mt-1 leading-relaxed">${s}</p>
+                    <p class="mt-1 leading-relaxed">${scaledStep}</p>
                 </div>`
-            ).join('');
+            }).join('');
             
             // Reset portion scale buttons
             document.querySelectorAll('.portion-btn').forEach(btn => {
